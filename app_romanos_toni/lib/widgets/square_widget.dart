@@ -1,3 +1,4 @@
+import 'package:app_romanos_toni/planets/destination_information.dart';
 import 'package:flutter/material.dart';
 
 class SquareWidget extends StatelessWidget {
@@ -6,8 +7,10 @@ class SquareWidget extends StatelessWidget {
     required this.orange,
     required this.normalText,
     required this.orangeText,
+    required this.planet,
   });
 
+  final DestinationInformation planet;
   final Color orange;
   final TextStyle normalText;
   final TextStyle orangeText;
@@ -19,7 +22,7 @@ class SquareWidget extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
           border: Border.all(color: orange),
-          borderRadius: BorderRadius.all(Radius.circular(15))),
+          borderRadius: const BorderRadius.all(Radius.circular(15))),
       padding: const EdgeInsets.all(20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,19 +54,19 @@ class SquareWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "2", 
+                planet.moons.toString(), 
                 style: orangeText,
               ),
               Text(
-                "Terrestrial",
+                planet.typePlanet,
                 style: orangeText,
               ),
               Text(
-                "687 Earth Days",
+                "${planet.lengthOfYear} Earth Days",
                 style: orangeText,
               ),
               Text(
-                "228 million km",
+                "${planet.distanceToSun} million km",
                 style: orangeText,
               ),
             ],
