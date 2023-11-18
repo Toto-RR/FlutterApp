@@ -1,5 +1,6 @@
 # FlutterApp
-A small prototype of a space travel application created with Flutter.  Design Link: https://www.behance.net/gallery/135669749/Beyond-Space-Travel-Blockchain-Web-3-App-Case-Study/modules/767616125
+A small prototype of a space travel application created with Flutter.  
+Design Link: https://www.behance.net/gallery/135669749/Beyond-Space-Travel-Blockchain-Web-3-App-Case-Study/modules/767616125
 
 ## Description
 This application called Beyond is an application designed to buy space travel, with destinations such as satellites, moons or planets. 
