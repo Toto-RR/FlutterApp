@@ -1,23 +1,26 @@
-import 'package:app_romanos_toni/screen/trip_screen.dart';
+import 'package:app_romanos_toni/satelite/satelite.dart';
+import 'package:app_romanos_toni/screens/satelite_screen.dart';
 import 'package:flutter/material.dart';
-import 'planets/destination_information.dart';
+
+/* 
+Link to reference: 
+https://www.behance.net/gallery/135669749/Beyond-Space-Travel-Blockchain-Web-3-App-Case-Study/modules/767616125
+*/ 
 
 void main() {
   runApp(const MyApp());
 }
 
-const DestinationInformation marte = DestinationInformation(
-    travelerName: "Pau",
-    planetName: "Mars",
-    moons: 2,
-    typePlanet: "Terrestrial",
-    lengthOfYear: 667,
-    distanceToSun: 228,
-    imageUrl: "assets/mars_photo.jpg",
-    description: "Mars is the fourth planet from the Sun - a dusty, cold,"
-        "desert world with a very thin atmosphere.\n"
-        "Mars is also a dynamic planet with seasons, polar ice caps, canyons,"
-        "extinct volcanoes, and evidence that it was even more active in the past");
+const sateliteISS = Satelite(
+  name: "International Space Station Journey", 
+  photo: "assets/ISS2.jpg",
+  about: "ISS is the home station of the planet earth. You will get to explore "
+  "& discover space travel and its gobsmacking experiences. Gravity is...", 
+  earthLocation: "Virginia", 
+  spaceLocation: "ISS", 
+  price: 1050,
+  time: 24,
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -26,11 +29,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: TripScreen(
-        planet: marte,
+      home: SateliteScreen(
+        satelite: sateliteISS,
       ),
     );
   }
 }
-
 
