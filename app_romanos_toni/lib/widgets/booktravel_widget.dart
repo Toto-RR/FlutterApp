@@ -9,7 +9,7 @@ class BookTravelWidget extends StatefulWidget {
   final Color orange;
 
   @override
-  _BookTravelWidgetState createState() => _BookTravelWidgetState();
+  State<BookTravelWidget> createState() => _BookTravelWidgetState();
 }
 
 class _BookTravelWidgetState extends State<BookTravelWidget> {
